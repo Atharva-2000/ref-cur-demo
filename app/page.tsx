@@ -36,7 +36,7 @@ export default function Home() {
     <main className="min-h-screen bg-background p-6 md:p-12">
       <div className="mx-auto max-w-7xl space-y-8">
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold tracking-tight">CCD Project Initialization</h1>
+          <h1 className="text-3xl font-bold tracking-tight">CCD Project Initialization demo</h1>
           <p className="text-muted-foreground">
             Initialize projects by extracting details from Ref Curator references and breaking them down into features
             and user flows.
