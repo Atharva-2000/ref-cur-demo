@@ -241,23 +241,23 @@ export function ProjectInitializationWizard({ currentProject }: ProjectInitializ
             </CardContent>
           </Card>
         )
+      // case 4:
+      //   return (
+      //     <Card>
+      //       <CardContent className="pt-6">
+      //         <h2 className="text-xl font-semibold mb-4">Step 3: Define User Flows per Feature</h2>
+      //         <UserFlowBuilder
+      //           features={features}
+      //           userFlows={userFlows}
+      //           references={selectedProject?.references || []}
+      //           onUserFlowsUpdate={handleUserFlowsUpdate}
+      //           onNext={handleNextStep}
+      //           onBack={handlePrevStep}
+      //         />
+      //       </CardContent>
+      //     </Card>
+      //   )
       case 4:
-        return (
-          <Card>
-            <CardContent className="pt-6">
-              <h2 className="text-xl font-semibold mb-4">Step 3: Define User Flows per Feature</h2>
-              <UserFlowBuilder
-                features={features}
-                userFlows={userFlows}
-                references={selectedProject?.references || []}
-                onUserFlowsUpdate={handleUserFlowsUpdate}
-                onNext={handleNextStep}
-                onBack={handlePrevStep}
-              />
-            </CardContent>
-          </Card>
-        )
-      case 5:
         return (
           <Card>
             <CardContent className="pt-6">
@@ -286,7 +286,7 @@ export function ProjectInitializationWizard({ currentProject }: ProjectInitializ
           >
             1
           </div>
-          <div className="absolute -bottom-6 text-xs text-center w-20" style={{ left: "-5px" }}>
+          <div className="absolute -bottom-6 text-xs text-center w-20" style={{ left: "-18px" }}>
             Initialize
           </div>
         </div>
@@ -297,7 +297,7 @@ export function ProjectInitializationWizard({ currentProject }: ProjectInitializ
           >
             2
           </div>
-          <div className="absolute -bottom-6 text-xs text-center w-20" style={{ left: "-5px" }}>
+          <div className="absolute -bottom-6 text-xs text-center w-20" style={{ left: "-18px" }}>
             Features
           </div>
         </div>
@@ -308,11 +308,12 @@ export function ProjectInitializationWizard({ currentProject }: ProjectInitializ
           >
             3
           </div>
-          <div className="absolute -bottom-6 text-xs text-center w-20" style={{ left: "-5px" }}>
-            User Flows
+          <div className="absolute -bottom-6 text-xs text-center w-20" style={{ left: "-18px" }}>
+            {/* User Flows */}
+            Finalize
           </div>
         </div>
-        <div className={`h-0.5 w-12 ${currentStep >= 5 ? "bg-primary" : "bg-border"}`} />
+        {/* <div className={`h-0.5 w-12 ${currentStep >= 5 ? "bg-primary" : "bg-border"}`} />
         <div className="relative">
           <div
             className={`flex h-10 w-10 items-center justify-center rounded-full text-sm font-medium ${currentStep >= 5 ? "bg-primary text-primary-foreground" : "border border-input bg-background"}`}
@@ -322,7 +323,7 @@ export function ProjectInitializationWizard({ currentProject }: ProjectInitializ
           <div className="absolute -bottom-6 text-xs text-center w-20" style={{ left: "-5px" }}>
             Finalize
           </div>
-        </div>
+        </div> */}
       </div>
 
       {renderStep()}
